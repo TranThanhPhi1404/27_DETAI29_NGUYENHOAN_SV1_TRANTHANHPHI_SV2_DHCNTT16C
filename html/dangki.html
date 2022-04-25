@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   	<meta charset="utf-8">
+	<title>Đăng Kí Tài Khoản</title>
+	<meta http-equiv="Content-Language" content="vi-vn">
+    <meta name="viewport" content="width=device-width, initial-scale=1">	    
+	<meta charset="utf-8">
+    <meta name="keywords" content="Xe Ô TÔ,Xe Ô TÔ rẻ,Xe Ô TÔ mới nhất,Xe Ô TÔ đẹp">
+	<meta name="description" content="nhiều ô tô,trang web giới thiệu và bán ô tô và phụ kiện,tìm kiếm thông tin ô tô dễ dàng">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/cssoto.css">
+	<script>
+		function ktname() {
+        var name = document.getElementById("name").value;
+        var reg = /^([A-Z][A-Za-Z]{2,})$/;
+        if (reg.test(name)) {
+            document.getElementById("err").innerHTML = "(*)";
+            return true;
+        } else {
+            document.getElementById("err").innerHTML = "(*)Sai";
+            return false;
+        }
+    }
+
+		function ktemail(){
+			var email=document.getElementById("email").value;
+			var reg=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			if(reg.test(email)){
+				document.getElementById("err1").innerHTML="(*)";
+				return true;
+			}else{
+				document.getElementById("err1").innerHTML="(*)Sai";
+				return false;
+			}
+		}
+		function ktmk(){
+			var mk=document.getElementById("pass").value;
+			var reg= /^[\w-@#$%^&*!]{8,}$/;
+			if(reg.test(mk)){
+				document.getElementById("err2").innerHTML="(*)";
+				return true;
+			}else{
+				document.getElementById("err2").innerHTML="(*)Sai";
+				return false;
+			}
+		}
+		function ktrmk(){
+			var mk=document.getElementById("pass").value;
+			var rmk=document.getElementById("rpass").value;
+			if(mk==rmk){
+				document.getElementById("err3").innerHTML="(*)";
+				return true;
+			}else{
+				document.getElementById("err3").innerHTML="(*)Sai";
+				return false;
+			}
+		}
+		
+		function ktsdt(){
+			var dt=document.getElementById("sdt").value;
+			var reg=/((09|03|07|08|05)+([0-9]{8})\b)/g;
+			if(reg.test(dt)){
+				document.getElementById("err4").innerHTML="(*)";
+			}else{
+				document.getElementById("err4").innerHTML="(*)Sai";
+			}
+		}
+	
+		var count=1;
+		function DangKi(){
+		
+			if(ktname()==true &&ktemail()==true &&ktrmk()==true &&ktsdt()==true ){
+				var acount=document.getElementById("acount").value;
+				var email=document.getElementById("email").value;
+				var dt=document.getElementById("sdt").value;
+			
+				var table = document.getElementById("table");
+				var row = table.insertRow(count);
+				var colStt=row.insertCell(0);
+				var colAcount = row.insertCell(1);
+				var colEmail = row.insertCell(2);
+				var colDt= row.insertCell(3);
+				
+				colStt.innerHTML=count;
+				colAcount.innerHTML = acount;
+				colEmail.innerHTML = email;
+				colDt.innerHTML = dt;
+			
+				document.getElementById("btn-dangki").disabled = false;
+				count++;
+			}
+		}
+	
+	</script>
+</head>
+<body>
+    <div class="wapper">
+		<div class="header">
+			<div class="top-menu">
+				<div class="logo">
+					<div class="">
+						<img id="logoxe" src="../img/logoxe.png">	
+						<p id="textlogo">Mua Bán Các Loại Ô Tô và Phụ Kiện</p>
+					</div>
+					<div class="acount">
+						<a href="../html/dangki.html">Đăng kí</a> |
+						<a href="../html/dangnhap.html">Đăng nhập</a>
+					</div>
+					<div class="search">
+				<input class="nhapseh" type="text" placeholder="Search">
+				<a href="../html/search.html"><button class="btseh" type="submit">Search</button></a>
+			</div><br>
+				</div>
+			</div>
+			
+			<div id="menu">
+				<ul>
+					<li><a href="../html/index.html">Trang Chủ</a></li>
+					<li><a href="../html/TinTuc.html">Tin Tức</a></li>
+					<li><a href="#">Loại Xe</a>
+						<ul class="sub-menu">
+							<li><a href="../html/OtoAudi.html">Audi</a></li>
+							<li><a href="../html/OtoFerrari.html">Ferrali</a></li>
+							<li><a href="../html/OtoBMW.html">BMW</a></li>
+							<li><a href="../html/OtoBentley.html">Bentley</a></li>
+							<li><a href="../html/OtoRollsRoyce.html">Rolls-Royce</a></li>
+							<li><a href="../html/OtoMercedesBenz.html">Mercedes-Benz</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Phụ Kiện</a>
+						<ul class="sub-menu">
+							 <li><a href="../html/Thamlot.html">Thảm lót sàn ô tô</a></li>
+                            <li><a href="../html/Bocvolang.html">Bọc vô lăng ô tô</a></li>
+						</ul>
+					</li>
+					<li><a href="../html/GioHang.html">Giỏ Hàng</a></li>
+					<li><a href="#">Thành Viên</a>
+						<ul class="sub-menu">
+							<li><a href="../html/dangki.html">Đã Đăng Kí</a></li>
+							<li><a href="../html/nhomthuchien.html">Nhóm Thực Hiện</a></li>
+						</ul>
+					</li>
+					<li><a href="../html/sitemap.html">Trang SiteMap</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main" style="margin-top:-80px;height:625px;">
+			<img src="../img/poster.jpg" class="posleft"style="height:575px">
+			<img src="../img/poster1.jpg" class="posright"style="height:575px">
+			<form>
+				<div class="form-footer"><h2 style="margin:20px;">Đăng Kí Tài Khoản</h2>
+				</div>
+				
+				<div class="form-main">
+					<div class="row">
+						<label for="name" class="lab">Tên Người Dùng:</label>
+						<input type="text" id="name" onblur="ktname();" class="input" placeholder="Nguyễn Văn Nam"><br>
+						<span id="err" >(*)</span>
+					</div>
+						
+					<div class="row">
+						<label for="acount" class="lab">Tài Khoản:</label>
+						<input type="text" id="acount" class="input" placeholder="nhoxfaz11"><span >(*)</span>
+					</div>
+					<div class="row">
+						<label for="email" class="lab">Email:</label>
+						<input type="email" id="email" class="input" onblur="ktemail();" placeholder="abc@gmail.com"><span id="err1">(*)</span>
+					</div>
+					<div class="row">
+						<label for="pass" class="lab">Nhập Mật Khẩu:</label>
+						<input type="password" id="pass" onblur="ktmk();" class="input"  ><span id="err2" >(*)</span>
+					</div>
+					<div class="row">
+						<label for="rpass" class="lab">Nhập Lại Mật Khẩu:</label>
+						<input type="password" id="rpass"onblur="ktrmk();" class="input"  ><span id="err3">(*)</span>
+					</div>
+					
+					<div class="row">
+                        <label for="sdt" class="lab">Số Điện Thoại:</label>
+                        <input type="text" id="sdt" class="input" onclick="ktsdt();" placeholder="0122334"><span id="err4">(*)</span>
+                    </div>
+                    <div class="row">
+                        <input type="button" id="btn-dangki" onclick="DangKi()" class="btn" value="DangKi"></input>
+                    </div>
+                    <div class="row">
+                        <p class="chu-y" style="text-align:left;color:red;">(Chú ý: Nhập dữ liệu đầy đủ và chính xác)</p>
+                    </div>
+
+				</div>
+				 
+			</form>
+		</div>
+		<div style="margin-top:50px;">
+			<table class="container"id="table">
+			  <thead>
+				<tr>
+					<th><h1>STT</h1></th>
+					<th><h1>Tài Khoản</h1></th>
+					<th><h1>Email</h1></th>
+					<th><h1>Số Điện Thoại</h1></th>
+				</tr>
+			  </thead>
+			</table>
+		</div>
+		<div class="footer">
+		
+			 <div class="container">
+				 <div class="noi-dung about">
+					 <h2>Về Chúng Tôi</h2>
+					 <p>Lorem ipsumdolor sit...</p>
+					 <ul class="social-icon">
+						 <li><a href="https://www.facebook.com/profile.php?id=100014625579481"><i class="fa fa-facebook"></i></a></li>
+					 </ul>
+				 </div>
+				 <div class="noi-dung links">
+					 <h2>Đường Dẫn</h2>
+					 <ul>
+					<li><a href="../html/index.html">Trang Chủ</a></li>
+						 <li><a href="../html/nhomthuchien.html">Về Chúng Tôi</a></li>
+					 </ul>
+				 </div>
+				 <div class="noi-dung contact">
+					<h2>Thông Tin Liên Hệ</h2>
+					<ul class="info">
+						<li>
+							<span><i class="fa fa-map-marker"></i></span>
+							<p>12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Thành phố Hồ Chí Minh</p>
+						</li>
+						<li>
+							<span><i class="fa fa-phone"></i></span>
+							<p>+84 848 311 706
+							   +84 987 123 654</p>
+						</li>
+						<li>
+							<span><i class="fa fa-envelope"></i></span>
+							<p>phi1442002@gmail.com</p>
+					   </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

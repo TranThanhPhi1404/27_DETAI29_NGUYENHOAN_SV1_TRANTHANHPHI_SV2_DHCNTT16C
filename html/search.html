@@ -1,0 +1,163 @@
+<html>
+<head>
+	<title>Trang Search</title>
+	<meta http-equiv="Content-Language" content="vi-vn">
+    <meta name="viewport" content="width=device-width, initial-scale=1">	    
+	<meta charset="utf-8">
+    <meta name="keywords" content="Xe Ô TÔ,Xe Ô TÔ rẻ,Xe Ô TÔ mới nhất,Xe Ô TÔ đẹp">
+	<meta name="description" content="nhiều ô tô,trang web giới thiệu và bán ô tô và phụ kiện,tìm kiếm thông tin ô tô dễ dàng">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/cssoto.css">
+	
+</head>
+<body>
+	<div class="wapper">
+		<div class="header">
+			<div class="top-menu">
+				<div class="logo">
+					<div class="">
+						<img id="logoxe" src="../img/logoxe.png">	
+						<p id="textlogo">Mua Bán Các Loại Ô Tô và Phụ Kiện</p>
+					</div>
+					<div class="acount">
+						<a href="../html/dangki.html">Đăng kí</a> |
+						<a href="../html/dangnhap.html">Đăng nhập</a>
+					</div>
+					<div class="search">
+				<input class="nhapseh" type="text" placeholder="Search">
+				<a href="../html/search.html"><button class="btseh" type="submit">Search</button></a>
+			</div><br>
+				</div>
+			</div>
+			
+			<div id="menu">
+				<ul>
+					<li><a href="../html/index.html">Trang Chủ</a></li>
+					<li><a href="../html/TinTuc.html">Tin Tức</a></li>
+					<li><a href="#">Loại Xe</a>
+						<ul class="sub-menu">
+							<li><a href="../html/OtoAudi.html">Audi</a></li>
+							<li><a href="../html/OtoFerrari.html">Ferrali</a></li>
+							<li><a href="../html/OtoBMW.html">BMW</a></li>
+							<li><a href="../html/OtoBentley.html">Bentley</a></li>
+							<li><a href="../html/OtoRollsRoyce.html">Rolls-Royce</a></li>
+							<li><a href="../html/OtoMercedesBenz.html">Mercedes-Benz</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Phụ Kiện</a>
+						<ul class="sub-menu">
+							<li><a href="../html/Thamlot.html">Thảm lót sàn ô tô</a></li>
+                            <li><a href="../html/Bocvolang.html">Bọc vô lăng ô tô</a></li>
+						</ul>
+					</li>
+					<li><a href="../html/GioHang.html">Giỏ Hàng</a></li>
+					<li><a href="#">Thành Viên</a>
+						<ul class="sub-menu">
+							<li><a href="../html/dangki.html">Đã Đăng Kí</a></li>
+							<li><a href="../html/nhomthuchien.html">Nhóm Thực Hiện</a></li>
+						</ul>
+					</li>
+					<li><a href="../html/sitemap.html">Trang SiteMap</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="main"style="height:550px;"> 
+			<img id="hinhxe1" src="../img/xedep.jpg" height="300px"width="200px;" >
+			<img id="hinhxe2"  src="../img/xedep2.jpg" height="300px"width="200px;" >
+			<div class="from-search">
+				<div style="margin-top:100px;margin-left:100px;margin-bottom:10px;height:30px;width:100%;">
+				</div>
+				<form style="height: 312px;margin-top: 80px;">
+					<h2 id="textInfo">Thông Tin Tìm Kiếm Xe</h2>
+					<div class="row">
+						<p class="name-sp">Nhập Tên Xe/Phụ kiện cần tìm:</p>
+						<input class="nhapseh"  id="timkiem" type="text" placeholder="Nhập từ khóa cần tìm" style="width:75%;margin-left:50px">
+					
+					</div>
+					<div class="row">
+						<p class="name-sp">Loại Xe/Phụ Kiện:</p>
+						<select class="select-name" id="timkiem1">
+							<option value="Audi">Chọn Xe</option>
+							<option value="Audi">Audi</option>
+							<option value="Ferrali">Ferrali</option>
+							<option value="BMW">BMW</option>
+							<option value="Bentley">Bentley</option>
+							<option value="Rolls-Royce">Rolls-Royce</option>
+							<option value="Mercedes-Benz">Mercedes-Benz</option>
+							<option value="Thảm lót sàn ô tô">Thảm lót sàn ô tô</option>
+							<option value="Bọc vô lăng ô tô">Bọc vô lăng ô tô</option>
+						</select>
+					</div>
+					<div class="row">
+						<p class="name-sp">Giá Tiền:</p>
+						<select class="select-name" id="timkiem2">
+							<option value=">0">>0</option>
+							<option value=">1 tỷ VNĐ">>1 tỷ VNĐ</option>
+							<option value=">5 tỷ VNĐ">>5 tỷ VNĐ</option>
+							<option value=">10 tỷ VNĐ">>10 tỷ VNĐ</option>
+							<option value=">20 tỷ VNĐ">>20 tỷ VNĐ</option>
+						</select>
+					</div>
+					<div class="row">
+						<button class="btseh" type="submit"style="margin-left:50px;" >Search</button>
+						<input class="btseh" id="reset" type="reset"style="margin-left:10px;"/>
+					</div>
+				</form>
+			</div>
+			<div class="table-tt">
+				<table class="container"id="table">
+			  <thead>
+				<tr>
+					<th><h1>Hình Ảnh</h1></th>
+					<th><h1>Tên Sản Phẩm/Phụ Kiện</h1></th>
+					<th><h1>Loại Xe/Phụ Kiện</h1></th>
+					<th><h1>Giá</h1></th>
+				</tr>
+			  </thead>
+			</table>
+			</div>			
+		</div>
+		
+		<div class="footer">
+			
+			 <div class="container">
+				 <div class="noi-dung about">
+					 <h2>Về Chúng Tôi</h2>
+					 <p>Lorem ipsumdolor sit...</p>
+					 <ul class="social-icon">
+						 <li><a href="https://www.facebook.com/profile.php?id=100014625579481"><i class="fa fa-facebook"></i></a></li>
+					 </ul>
+				 </div>
+				 <div class="noi-dung links">
+					 <h2>Đường Dẫn</h2>
+					 <ul>
+					<li><a href="../html/index.html">Trang Chủ</a></li>
+						 <li><a href="../html/nhomthuchien.html">Về Chúng Tôi</a></li>
+					 </ul>
+				 </div>
+				 <div class="noi-dung contact">
+					<h2>Thông Tin Liên Hệ</h2>
+					<ul class="info">
+						<li>
+							<span><i class="fa fa-map-marker"></i></span>
+							<p>12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Thành phố Hồ Chí Minh</p>
+						</li>
+						<li>
+							<span><i class="fa fa-phone"></i></span>
+							<p>+84 848 311 706
+							   +84 987 123 654</p>
+						</li>
+						<li>
+							<span><i class="fa fa-envelope"></i></span>
+							<p>phi1442002@gmail.com</p>
+					   </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
